@@ -1,14 +1,15 @@
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import classification_report, accuracy_score, confusion_matrix, f1_score
-from sklearn.preprocessing import LabelEncoder
-from transformers import DistilBertTokenizer, DistilBertForSequenceClassification, Trainer, TrainingArguments
-import torch
-import seaborn as sns
-import matplotlib.pyplot as plt
+import pandas as pd 
+from sklearn.model_selection import train_test_split 
+from sklearn.feature_extraction.text import TfidfVectorizer 
+from sklearn.linear_model import LogisticRegression 
+from sklearn.naive_bayes import MultinomialNB 
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix, f1_score 
+from sklearn.preprocessing import LabelEncoder 
+from transformers import DistilBertTokenizer, DistilBertForSequenceClassification, Trainer, TrainingArguments 
+import torch 
+import seaborn as sns 
+import matplotlib.pyplot as plt 
+import joblib 
 
 # Step 1: Data Preparation for Urgency
 print("Step 1: Data Preparation for Urgency")
@@ -191,5 +192,11 @@ plt.show()
 
 print(f"Combined BERT F1 Score (Macro): {f1_score(y_test, y_pred_bert_combined, average='macro'):.4f}")
 print(f"Combined BERT F1 Score (Weighted): {f1_score(y_test, y_pred_bert_combined, average='weighted'):.4f}")
+
+joblib.dump(vectorizer, 'tfidf_vectorizer.pkl')
+joblib.dump(lr_model, 'lr_model.pkl')
+model.save_pretrained('./distilbert_model')
+tokenizer.save_pretrained('./distilbert_model')
+print("Models saved successfully")
 
 print("Executed Successfully")
