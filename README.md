@@ -13,3 +13,6 @@ https://www.kaggle.com/datasets/wcukierski/enron-email-dataset
 7. dashboard7.py: To provide a visual dashboard that displays email classification and urgency prediction results in an easy to understand format.
 8. email_stream_simulator8.py: To simulate a real time incoming email system.
 9. sample_labeled_emails.py: To create a smaller version of the labeled dataset for testing and deployment.
+
+##Deployment Url
+https://ai-email-classifier-g7ec4jca9pa5psfafumwgc.streamlit.app/
