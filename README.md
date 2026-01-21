@@ -14,5 +14,11 @@ https://www.kaggle.com/datasets/wcukierski/enron-email-dataset
 8. email_stream_simulator8.py: To simulate a real time incoming email system.
 9. sample_labeled_emails.py: To create a smaller version of the labeled dataset for testing and deployment.
 
-##Deployment Url
-https://ai-email-classifier-g7ec4jca9pa5psfafumwgc.streamlit.app/
+##Deployment
+Deployed on the streamlit
+Deployment URL: https://ai-email-classifier-g7ec4jca9pa5psfafumwgc.streamlit.app/
+
+##Documetation
+Dhiraj_Agile_Template_v0.1.xls
+Dhiraj_Agile_Template_v0.1.xlsTemplate_v0.1.xlsx
+Dhiraj_Unit_Test_Plan_v0.1.xlsx
